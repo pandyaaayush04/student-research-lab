@@ -13,19 +13,25 @@ const Hero = () => {
       id="home"
       className="
         min-h-screen
-        pt-28
-        pb-4
-        px-4 sm:px-6
+        pt-24 sm:pt-28 lg:pt-32
+        pb-10 sm:pb-16
+        px-4 sm:px-6 md:px-8
         scroll-mt-28
       "
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* LEFT COLUMN */}
         <div className="lg:pr-6 text-center lg:text-left">
-
           {/* MAIN TITLE */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-5 text-[#1F1F1F]">
+          <h1
+            className="
+            text-4xl sm:text-5xl lg:text-6xl
+            font-extrabold
+            leading-tight sm:leading-tight lg:leading-[1.15]
+            mb-6
+            text-[#1F1F1F]
+          "
+          >
             <BlurText
               text="Transforming Notion into"
               delay={120}
@@ -44,72 +50,94 @@ const Hero = () => {
           </h1>
 
           {/* SUBTITLE */}
-          <p className="max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 text-[#3A3A35]">
+          <p
+            className="
+            max-w-xl
+            mx-auto lg:mx-0
+            text-base sm:text-lg
+            leading-relaxed sm:leading-relaxed
+            mb-10
+            text-[#3A3A35]
+          "
+          >
             We are a collaborative hub where undergraduate and graduate students
             tackle real-world problems through interdisciplinary research.
           </p>
 
           {/* HERO BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div
+            className="
+            mt-8 sm:mt-10
+            flex flex-col sm:flex-row
+            gap-4 sm:gap-6
+            justify-center lg:justify-start
+          "
+          >
             <button
               onClick={() => scrollToSection("research")}
               className="
-                px-6 py-3
-                text-base font-semibold
-                rounded-lg
-                transition-colors
-                w-full sm:w-auto
+                px-7 sm:px-8 py-3
+                rounded-full
                 bg-[#5EEAD4]
                 text-[#134E4A]
+                font-semibold
+                transition-all
+                hover:scale-[1.03]
                 hover:opacity-90
               "
             >
-              Explore our research →
+              Explore Research
             </button>
 
             <button
               onClick={() => scrollToSection("join")}
               className="
-                px-6 py-3
-                text-base font-semibold
-                rounded-lg
-                transition-colors
-                w-full sm:w-auto
-                bg-[#5EEAD4]
-                text-[#134E4A]
-                hover:opacity-90
+                px-7 sm:px-8 py-3
+                rounded-full
+                border-2 border-[#5EEAD4]
+                text-[#5EEAD4]
+                font-semibold
+                transition-all
+                hover:bg-[#5EEAD4]
+                hover:text-[#134E4A]
+                hover:scale-[1.03]
               "
             >
-              Join The Lab
+              Join the Lab
             </button>
           </div>
-
         </div>
 
         {/* RIGHT COLUMN — LOGO */}
-        <div className="flex items-center justify-center lg:pl-6">
+        <div className="flex items-center justify-center lg:pl-6 mt-10 lg:mt-0">
           <div className="text-center">
-
             <img
               src={logo}
               alt="Student Research Lab MMPSRPC KSV"
               className="
-                w-28 h-28
-                sm:w-36 sm:h-36
-                md:w-40 md:h-40
-                mx-auto mb-6
-                object-contain
-              "
+    w-28 h-28
+    sm:w-36 sm:h-36
+    md:w-44 md:h-44
+    lg:w-48 lg:h-48
+    mx-auto mb-6
+    object-contain
+  "
             />
 
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-[#115E59]">
+            <h3
+              className="
+              text-xl sm:text-2xl md:text-4xl
+              font-semibold
+              tracking-wide
+              text-[#115E59]
+            "
+            >
               Student Research Lab
             </h3>
 
-            <div className="mx-auto mt-3 h-1 w-24 sm:w-28 rounded-full bg-[#5EEAD4]" />
+            <div className="mx-auto mt-3 h-1 w-20 sm:w-28 rounded-full bg-[#5EEAD4]" />
           </div>
         </div>
-
       </div>
     </section>
   );

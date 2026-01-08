@@ -41,7 +41,7 @@ const Gallery = () => {
     },
   ];
 
-  /* ESC closes popup smoothly */
+  /* ESC closes popup */
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") closePopup();
@@ -50,16 +50,13 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleEsc);
   }, []);
 
-  /* OBSERVE SECTION ONCE */
+  /* OBSERVER — RUN EVERY TIME */
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.25 }
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -73,24 +70,22 @@ const Gallery = () => {
 
   const closePopup = () => {
     setIsPopupVisible(false);
-    setTimeout(() => setActiveItem(null), 300); // match transition duration
+    setTimeout(() => setActiveItem(null), 300);
   };
 
-  /* INWARD DIAGONAL TRANSFORMS */
+  /* RESPONSIVE INWARD TRANSFORMS */
   const getTransform = (direction) => {
-    if (isVisible) {
-      return "opacity-100 translate-x-0 translate-y-0";
-    }
+    if (isVisible) return "opacity-100 translate-x-0 translate-y-0";
 
     switch (direction) {
       case "top-left":
-        return "opacity-0 -translate-x-24 -translate-y-24";
+        return "opacity-0 -translate-x-12 -translate-y-12 sm:-translate-x-24 sm:-translate-y-24";
       case "top-right":
-        return "opacity-0 translate-x-24 -translate-y-24";
+        return "opacity-0 translate-x-12 -translate-y-12 sm:translate-x-24 sm:-translate-y-24";
       case "bottom-left":
-        return "opacity-0 -translate-x-24 translate-y-24";
+        return "opacity-0 -translate-x-12 translate-y-12 sm:-translate-x-24 sm:translate-y-24";
       case "bottom-right":
-        return "opacity-0 translate-x-24 translate-y-24";
+        return "opacity-0 translate-x-12 translate-y-12 sm:translate-x-24 sm:translate-y-24";
       default:
         return "opacity-0";
     }
@@ -100,13 +95,18 @@ const Gallery = () => {
     <section
       id="gallery"
       ref={sectionRef}
-      className="pt-4 pb-6 px-6 mx-4"
+      className="
+        pt-8 sm:pt-12
+        pb-10 sm:pb-16
+        px-4 sm:px-6 lg:px-8
+        overflow-x-hidden
+      "
     >
       <div className="max-w-7xl mx-auto">
-        <div className="rounded-2xl p-8 sm:p-12 lg:p-16 bg-white">
+        <div className="rounded-2xl bg-white px-6 sm:px-10 lg:px-16 py-8 sm:py-12">
 
-          {/* HEADER */}
-          <div className="mb-16 max-w-2xl">
+          {/* HEADER — CENTER ALIGNED */}
+          <div className="mb-10 sm:mb-16 max-w-2xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-3">
               Gallery
             </h2>
@@ -117,7 +117,7 @@ const Gallery = () => {
           </div>
 
           {/* GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10">
             {galleryItems.map((item, i) => (
               <div
                 key={i}
@@ -125,7 +125,7 @@ const Gallery = () => {
                 className={`
                   cursor-pointer
                   rounded-2xl
-                  p-6
+                  p-5 sm:p-6
                   bg-neutral-50
                   transition-all
                   duration-[1200ms]
@@ -134,11 +134,11 @@ const Gallery = () => {
                   ${getTransform(item.direction)}
                 `}
               >
-                <div className="rounded-xl overflow-hidden mb-6">
+                <div className="rounded-xl overflow-hidden mb-4 sm:mb-6">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-64 sm:h-72 object-contain"
+                    className="w-full h-56 sm:h-72 object-contain"
                   />
                 </div>
 
@@ -160,7 +160,8 @@ const Gallery = () => {
           onClick={closePopup}
           className={`
             fixed inset-0 z-50
-            flex items-center justify-center p-6
+            flex items-center justify-center
+            px-4 sm:px-6
             transition-all duration-300 ease-out
             ${isPopupVisible ? "bg-black/60 backdrop-blur-sm opacity-100" : "bg-black/0 opacity-0"}
           `}
@@ -168,8 +169,10 @@ const Gallery = () => {
           <div
             onClick={(e) => e.stopPropagation()}
             className={`
-              bg-white rounded-2xl max-w-5xl w-full
-              grid grid-cols-1 md:grid-cols-2 overflow-hidden
+              bg-white rounded-2xl
+              max-w-5xl w-full
+              grid grid-cols-1 md:grid-cols-2
+              overflow-hidden
               transform transition-all duration-300 ease-out
               ${isPopupVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"}
             `}
@@ -178,11 +181,11 @@ const Gallery = () => {
               <img
                 src={activeItem.image}
                 alt={activeItem.title}
-                className="w-full h-full max-h-[75vh] object-contain"
+                className="w-full h-full max-h-[70vh] object-contain"
               />
             </div>
 
-            <div className="p-8 sm:p-10 flex flex-col justify-center">
+            <div className="px-6 py-6 sm:px-10 sm:py-8 flex flex-col justify-center">
               <h3 className="text-xl sm:text-2xl font-semibold mb-4">
                 {activeItem.title}
               </h3>
