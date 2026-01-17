@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-const NAV_HEIGHT = 72;
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -8,25 +7,18 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const menuItems = [
-    { label: "Home", id: "home" },
-    { label: "About", id: "about" },
-    { label: "Research", id: "research" },
-    { label: "Gallery", id: "gallery" },
-    { label: "Researchers", id: "team" },
-    { label: "Join Us", id: "join" },
+    { label: "Home", path: "/" },
+    { label: "Research", path: "/research" },
+    { label: "Gallery", path: "/gallery" },
+    { label: "Researchers", path: "/team" },
   ];
 
   /* ---- hide / show navbar on scroll ---- */
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-
-      if (currentY > lastScrollY && currentY > 80) {
-        setHidden(true);
-      } else {
-        setHidden(false);
-      }
-
+      if (currentY > lastScrollY && currentY > 80) setHidden(true);
+      else setHidden(false);
       setLastScrollY(currentY);
     };
 
@@ -34,66 +26,50 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handleScroll = (id) => {
-    setOpen(false);
-    const section = document.getElementById(id);
-    if (!section) return;
-
-    const y =
-      section.getBoundingClientRect().top +
-      window.pageYOffset -
-      NAV_HEIGHT;
-
-    window.scrollTo({ top: y, behavior: "smooth" });
-  };
-
   return (
     <nav
       className={`
         fixed top-0 left-0 right-0 z-50
-        bg-[#DDE8E3]
-        border-b border-[#C8D6D0]/60
+        bg-primary/90
+        shadow-md
         transition-transform duration-300 ease-out
         ${hidden ? "-translate-y-full" : "translate-y-0"}
       `}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-[72px]">
-        <div className="flex items-center justify-between gap-4 h-full">
+        <div className="flex items-center h-full relative">
 
           {/* LEFT — SRL Identity */}
-          <div
-            className="flex items-center gap-2 cursor-pointer shrink-0"
-            onClick={() => handleScroll("home")}
-          >
+          <Link to="/" className="flex items-center gap-2 shrink-0">
             <img
               src="/SRL Logo.png"
               alt="SRL"
               className="h-10 sm:h-11 object-contain"
             />
-            <span className="hidden sm:block text-base sm:text-lg font-semibold text-[#1F1F1F]">
+            <span className="hidden sm:block text-base sm:text-lg font-semibold text-white">
               Student Research Lab
             </span>
-          </div>
+          </Link>
 
-          {/* CENTER — DESKTOP MENU */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* CENTER — DESKTOP MENU + APPOINTMENT */}
+          <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-8">
             {menuItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={() => handleScroll(item.id)}
+                to={item.path}
                 className="
                   relative
                   font-medium
-                  text-[#1F1F1F]/90
+                  text-white/90
                   transition-colors
-                  hover:text-black
+                  hover:text-white
                   after:content-['']
                   after:absolute
                   after:left-0
                   after:-bottom-1
                   after:h-[2px]
                   after:w-full
-                  after:bg-[#5EEAD4]
+                  after:bg-white/70
                   after:scale-x-0
                   after:origin-left
                   after:transition-transform
@@ -102,9 +78,10 @@ const Navbar = () => {
                 "
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
 
+            {/* APPOINTMENT BUTTON */}
             <a
               href="https://appointment.mmpsrpc.in/student"
               target="_blank"
@@ -112,10 +89,10 @@ const Navbar = () => {
               className="
                 px-4 py-2
                 rounded-full
-                bg-[#134E4A]
-                text-[#DDE8E3]
+                bg-white
+                text-primary
                 font-medium
-                hover:bg-[#3A3A35]
+                hover:opacity-90
                 transition
               "
             >
@@ -123,8 +100,8 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* RIGHT — INSTITUTIONAL LOGOS (UNCHANGED) */}
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+          {/* RIGHT — INSTITUTIONAL LOGOS */}
+          <div className="ml-auto hidden sm:flex items-center gap-3 sm:gap-4 shrink-0">
             <img
               src="/MMPSRPC Logo.png"
               alt="MMPSRPC"
@@ -144,7 +121,7 @@ const Navbar = () => {
 
           {/* MOBILE MENU TOGGLE */}
           <button
-            className="lg:hidden text-[#1F1F1F]"
+            className="lg:hidden ml-auto text-white"
             onClick={() => setOpen((v) => !v)}
           >
             <svg
@@ -172,8 +149,8 @@ const Navbar = () => {
       <div
         className={`
           lg:hidden
-          bg-[#DDE8E3]
-          border-t border-[#C8D6D0]
+          bg-primary/90
+          border-t border-white/10
           overflow-hidden
           transition-all duration-300
           ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
@@ -181,15 +158,17 @@ const Navbar = () => {
       >
         <div className="flex flex-col px-6 py-6 gap-4">
           {menuItems.map((item) => (
-            <button
+            <Link
               key={item.label}
-              onClick={() => handleScroll(item.id)}
-              className="text-left font-medium text-[#1F1F1F]"
+              to={item.path}
+              onClick={() => setOpen(false)}
+              className="text-left font-medium text-white"
             >
               {item.label}
-            </button>
+            </Link>
           ))}
 
+          {/* MOBILE APPOINTMENT */}
           <a
             href="https://appointment.mmpsrpc.in/student"
             target="_blank"
@@ -199,9 +178,11 @@ const Navbar = () => {
               inline-flex justify-center
               px-5 py-3
               rounded-full
-              bg-[#1F1F1F]
-              text-[#DDE8E3]
+              bg-white
+              text-primary
               font-medium
+              hover:opacity-90
+              transition
             "
           >
             Appointment

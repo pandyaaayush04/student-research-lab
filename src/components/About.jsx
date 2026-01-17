@@ -3,7 +3,7 @@ const About = () => {
     <section
       id="about"
       className="
-        pt-14 sm:pt-16
+        sm:pt-16
         pb-8 sm:pb-12
         px-4 sm:px-6 lg:px-8
         overflow-x-hidden
@@ -14,7 +14,7 @@ const About = () => {
         <div
           className="
             rounded-2xl
-            bg-white
+            bg-card
             px-6 sm:px-10 lg:px-14
             py-6 sm:py-8
             mx-auto
@@ -29,6 +29,7 @@ const About = () => {
                   font-bold
                   leading-tight
                   mb-5 sm:mb-6
+                  text-text-primary
                 "
               >
                 About the Student Research Lab
@@ -39,6 +40,7 @@ const About = () => {
                   text-base sm:text-lg
                   leading-relaxed
                   max-w-xl
+                  text-text-muted
                 "
               >
                 The Student Research Lab fosters a collaborative environment
@@ -53,19 +55,19 @@ const About = () => {
                 <div
                   className="
                     rounded-2xl
-                    bg-neutral-50/60
+                    bg-background
                     px-6 sm:px-8
                     py-5 sm:py-6
                     text-center
                   "
                 >
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-2">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-text-primary">
                     Research Focus
                   </h3>
 
-                  <div className="mx-auto h-1 w-16 rounded-full mb-4 bg-[#5EEAD4]" />
+                  <div className="mx-auto h-1 w-16 rounded-full mb-4 bg-primary" />
 
-                  <ul className="space-y-3 text-sm sm:text-base leading-relaxed">
+                  <ul className="space-y-3 text-sm sm:text-base leading-relaxed text-text-muted">
                     <li>
                       Interdisciplinary research addressing emerging
                       technologies and real-world societal challenges.
@@ -107,11 +109,13 @@ const About = () => {
                     p-7 sm:p-8 lg:p-9
                     text-center
                     transition-colors duration-300
-                    hover:bg-[#ECFDF5]
+                    hover:bg-primary/5
                   "
                 >
-                  <p className="text-sm text-neutral-500">Active Members</p>
-                  <p className="text-4xl font-bold mt-1">30+</p>
+                  <p className="text-sm text-text-muted">Active Members</p>
+                  <p className="text-4xl font-bold mt-1 text-text-primary">
+                    30+
+                  </p>
                 </div>
 
                 {/* Research Domains */}
@@ -123,11 +127,13 @@ const About = () => {
                     p-7 sm:p-8 lg:p-9
                     text-center
                     transition-colors duration-300
-                    hover:bg-[#ECFDF5]
+                    hover:bg-primary/5
                   "
                 >
-                  <p className="text-sm text-neutral-500">Research Domains</p>
-                  <p className="text-4xl font-bold mt-1">8+</p>
+                  <p className="text-sm text-text-muted">Research Domains</p>
+                  <p className="text-4xl font-bold mt-1 text-text-primary">
+                    8+
+                  </p>
                 </div>
 
                 {/* Applied Research */}
@@ -139,10 +145,10 @@ const About = () => {
                     flex items-center justify-center
                     text-center
                     transition-colors duration-300
-                    hover:bg-[#ECFDF5]
+                    hover:bg-primary/5
                   "
                 >
-                  <p className="text-base font-bold leading-snug">
+                  <p className="text-base font-bold leading-snug text-text-primary">
                     Applied
                     <br />
                     Research
@@ -153,22 +159,22 @@ const About = () => {
                 <div className="flex items-center justify-center overflow-hidden">
                   <div
                     className="
+                      hidden sm:flex
+                      items-center justify-center
                       h-28 w-28
                       sm:h-32 sm:w-32
-                      lg:h-36 lg:w-36
+                      lg:h-28 lg:w-28
                       rounded-full
-                      bg-white
-                      flex items-center justify-center
-                      ring-8 ring-neutral-200/40
+                      bg-card
+                      ring-8 ring-border/40
                     "
                   >
                     <img
                       src="/SRL Logo.png"
                       alt="SRL Logo"
                       className="
-                        h-18 w-18
-                        sm:h-20 sm:w-20
-                        lg:h-22 lg:w-22
+                        sm:h-32 sm:w-32
+                        lg:h-32 lg:w-32
                         object-contain
                       "
                     />
@@ -184,10 +190,10 @@ const About = () => {
                     flex items-center justify-center
                     text-center
                     transition-colors duration-300
-                    hover:bg-[#ECFDF5]
+                    hover:bg-primary/5
                   "
                 >
-                  <p className="text-base font-bold leading-snug">
+                  <p className="text-base font-bold leading-snug text-text-primary">
                     Guided
                     <br />
                     Mentorship
@@ -203,13 +209,15 @@ const About = () => {
                     p-7 sm:p-8 lg:p-9
                     text-center
                     transition-colors duration-300
-                    hover:bg-[#ECFDF5]
+                    hover:bg-primary/5
                   "
                 >
-                  <p className="text-sm text-neutral-500 font-semibold">
+                  <p className="text-sm text-text-muted font-semibold">
                     Workshops
                   </p>
-                  <p className="text-xl font-bold mt-1">Hands-on Learning</p>
+                  <p className="text-xl font-bold mt-1 text-text-primary">
+                    Hands-on Learning
+                  </p>
                 </div>
 
                 {/* Publications */}
@@ -220,11 +228,13 @@ const About = () => {
                     p-7 sm:p-8 lg:p-9
                     text-center
                     transition-colors duration-300
-                    hover:bg-[#ECFDF5]
+                    hover:bg-primary/5
                   "
                 >
-                  <p className="text-sm text-neutral-500">Publications</p>
-                  <p className="text-4xl font-bold mt-1">2+</p>
+                  <p className="text-sm text-text-muted">Publications</p>
+                  <p className="text-4xl font-bold mt-1 text-text-primary">
+                    2+
+                  </p>
                 </div>
               </div>
             </div>

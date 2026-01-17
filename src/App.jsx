@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+
 import Navbar from "./components/Navbar";
 import Background from "./components/Background";
 import Preloader from "./components/Preloader";
+import Footer from "./components/Footer";
+
 import Hero from "./components/Hero";
 import About from "./components/About";
+import JoinLab from "./components/JoinLab";
+
 import ResearchAreas from "./components/ResearchAreas";
 import Gallery from "./components/Gallery";
 import Team from "./components/Team";
-import JoinLab from "./components/JoinLab";
-import Footer from "./components/Footer";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1800);
@@ -24,25 +29,45 @@ export default function App() {
   }
 
   return (
-    <BrowserRouter>
-      {/* Background layer */}
+    <>
       <Background />
 
-      {/* Foreground content */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
 
-        <main className="pt-16 space-y-16">
-          <Hero />
-          <About />
-          <ResearchAreas />
-          <Gallery />
-          <Team />
-          <JoinLab />
+        <main className="flex-1 pt-16 overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={location.pathname}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.35,
+                ease: "easeInOut",
+              }}
+            >
+              <Routes location={location}>
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Hero />
+                      <About />
+                      <JoinLab />
+                    </>
+                  }
+                />
+                <Route path="/research" element={<ResearchAreas />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/team" element={<Team />} />
+              </Routes>
+            </motion.div>
+          </AnimatePresence>
         </main>
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </>
   );
 }

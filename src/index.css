@@ -1,30 +1,18 @@
-/* Google Fonts — MUST be first */
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .btn-srl {
-    @apply
-      bg-srl-ink
-      text-srl-parchment
-      hover:bg-srl-inkMuted
-      transition-colors
-      font-medium
-      rounded-full;
-  }
-}
-
+/* ===== GLOBAL BASE ===== */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Source Sans 3", system-ui, sans-serif;
-  background-color: #f9fbf9;
-  color: #263238;
+  background-color: #FAFAF9; /* matches theme.background */
+  color: #1C1917;           /* matches theme.text.primary */
 }
 
 h1,
@@ -34,6 +22,51 @@ h4,
 h5,
 h6 {
   font-family: "Libre Baskerville", Georgia, serif;
+}
+
+/* ===== REUSABLE UI COMPONENTS ===== */
+@layer components {
+  /* Primary CTA */
+  .btn-primary {
+    @apply
+      px-7 sm:px-8 py-3
+      rounded-full
+      bg-primary
+      text-white
+      font-semibold
+      transition-all
+      hover:scale-[1.03]
+      hover:opacity-90;
+  }
+
+  /* Outline / Secondary CTA */
+  .btn-outline {
+    @apply
+      px-7 sm:px-8 py-3
+      rounded-full
+      border-2 border-accent
+      text-accent
+      font-semibold
+      transition-all
+      hover:bg-accent
+      hover:text-primary
+      hover:scale-[1.03];
+  }
+
+  /* Muted text */
+  .text-muted {
+    @apply text-text-muted;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-card border border-border rounded-2xl;
+  }
+}
+
+/* ===== ANIMATION HELPERS ===== */
+* {
+  backface-visibility: hidden;
 }
 
 @keyframes vibrate {

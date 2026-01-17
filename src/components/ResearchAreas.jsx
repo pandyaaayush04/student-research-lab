@@ -1,104 +1,10 @@
 import { useEffect, useState } from "react";
+import { researchWorks } from "../data/researchData";
 
 const ResearchAreas = () => {
   const [activeResearch, setActiveResearch] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
-
-  const researchWorks = [
-    {
-      title: "Artificial Intelligence & Machine Learning",
-      status: "Ongoing",
-      short: "Applied research on intelligent systems and data-driven models.",
-      description:
-        "This research focuses on machine learning algorithms, intelligent systems, and data-driven decision-making, emphasizing real-world applications and experimentation.",
-      members: [
-        {
-          name: "Aayush Pandya",
-          semester: "4th",
-          branch: "CE",
-          email: "aayush@email.com",
-          linkedin: "https://linkedin.com",
-        },
-        {
-          name: "Mahi Parmar",
-          semester: "4th",
-          branch: "CE",
-          email: "mahi@email.com",
-          linkedin: "https://linkedin.com",
-        },
-      ],
-    },
-    {
-      title: "Cybersecurity & Digital Trust",
-      status: "Ongoing",
-      short: "Secure systems, cryptography, and trust frameworks.",
-      description:
-        "This research explores cryptographic techniques, secure architectures, and trust-based digital systems for modern applications.",
-      members: [
-        {
-          name: "Kandarp Gajjar",
-          semester: "8th",
-          branch: "CE",
-          email: "kandarp@email.com",
-          linkedin: "https://linkedin.com",
-        },
-        {
-          name: "Hemant Pande",
-          semester: "6th",
-          branch: "CE",
-          email: "hemant@email.com",
-          linkedin: "https://linkedin.com",
-        },
-      ],
-    },
-    {
-      title: "Internet of Things (IoT)",
-      status: "Completed",
-      short: "Sensor-based systems for real-world monitoring.",
-      description:
-        "Completed research on IoT sensor networks, data aggregation, and monitoring systems deployed in controlled environments.",
-      members: [
-        {
-          name: "Hemant Pande",
-          semester: "8th",
-          branch: "CE",
-          email: "hemant@email.com",
-          linkedin: "https://linkedin.com",
-        },
-        {
-          name: "Pragati Varu",
-          semester: "4th",
-          branch: "CE",
-          email: "pragati@email.com",
-          linkedin: "https://linkedin.com",
-        },
-      ],
-    },
-    {
-      title: "Quantum Computing & Cryptography",
-      status: "Ongoing",
-      short: "Exploring quantum algorithms and post-quantum security models.",
-      description:
-        "This research investigates quantum computing principles, quantum algorithms, and their impact on modern cryptographic systems, including post-quantum security frameworks.",
-      members: [
-        {
-          name: "Aayush Pandya",
-          semester: "4th",
-          branch: "CE",
-          email: "aayush@email.com",
-          linkedin: "https://linkedin.com",
-        },
-        {
-          name: "Kandarp Gajjar",
-          semester: "8th",
-          branch: "CE",
-          email: "kandarp@email.com",
-          linkedin: "https://linkedin.com",
-        },
-      ],
-    },
-  ];
 
   const openModal = (work) => {
     setActiveResearch(work);
@@ -133,51 +39,76 @@ const ResearchAreas = () => {
       "
     >
       <div className="max-w-7xl mx-auto">
-        <div className="rounded-2xl bg-white px-6 sm:px-10 lg:px-16 py-8 sm:py-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-16 text-center">
+        <div className="rounded-2xl bg-card px-6 sm:px-10 lg:px-16 py-8 sm:py-12">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-10 sm:mb-16 text-center text-text-primary">
             Research Works
           </h2>
 
           <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
-            {researchWorks.map((work) => (
-              <div
-                key={work.title}
-                onClick={() => openModal(work)}
-                className="
-                  relative cursor-pointer
-                  rounded-2xl
-                  p-6 sm:p-8
-                  bg-neutral-100
-                  transition-colors duration-300
-                  hover:bg-neutral-200
-                "
-              >
-                <div className="absolute top-4 left-4 flex items-center gap-2 text-xs font-medium">
-                  {work.status === "Ongoing" ? (
-                    <>
-                      <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75 animate-ping"></span>
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+            {researchWorks.map((work) => {
+              const isOngoing = work.status === "Ongoing";
+
+              return (
+                <div
+                  key={work.title}
+                  onClick={() => openModal(work)}
+                  className="
+                    relative cursor-pointer
+                    rounded-2xl
+                    p-6 sm:p-8
+                    bg-background
+                    transition-colors duration-300
+                    hover:bg-primary/5
+                  "
+                >
+                  {/* STATUS PILL WITH LIVE DOT */}
+                  <div className="absolute top-4 left-4">
+                    {isOngoing ? (
+                      <span
+                        className="
+                          inline-flex items-center gap-2
+                          px-2 py-0.4
+                          rounded-full
+                          text-[11px] font-medium
+                          bg-primary/20
+                          text-primary
+                        "
+                      >
+                        {/* LIVE DOT */}
+                        <span className="relative flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping"></span>
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+                        </span>
+                        Ongoing
                       </span>
-                      <span className="text-emerald-700">Ongoing</span>
-                    </>
-                  ) : (
-                    <>
-                      <span className="inline-flex h-2 w-2 rounded-full bg-neutral-400"></span>
-                      <span className="text-neutral-500">Completed</span>
-                    </>
-                  )}
+                    ) : (
+                      <span
+                        className="
+                          inline-flex items-center gap-2
+                          px-2 py-0.4
+                          rounded-full
+                          text-[11px] font-medium
+                          bg-border
+                          text-text-muted
+                        "
+                      >
+                        {/* STATIC DOT */}
+                        <span className="inline-flex h-2 w-2 rounded-full bg-text-muted/60"></span>
+                        Completed
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="text-lg sm:text-xl font-semibold mt-6 mb-3 text-text-primary">
+                    {work.title}
+                  </h3>
+
+                  <p className="text-sm text-text-muted">
+                    {work.short}
+                  </p>
                 </div>
-
-                <h3 className="text-lg sm:text-xl font-semibold mt-6 mb-3">
-                  {work.title}
-                </h3>
-
-                <p className="text-sm text-neutral-600">
-                  {work.short}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -198,7 +129,7 @@ const ResearchAreas = () => {
             className={`
               relative
               w-full max-w-3xl
-              bg-white
+              bg-card
               rounded-3xl
               px-6 sm:px-10
               py-8 sm:py-10
@@ -213,19 +144,19 @@ const ResearchAreas = () => {
             `}
           >
             <div className="mb-6">
-              <span className="text-xs uppercase tracking-wide text-neutral-500">
+              <span className="text-xs uppercase tracking-wide text-text-muted">
                 {activeResearch.status}
               </span>
-              <h3 className="text-2xl sm:text-3xl font-bold mt-2">
+              <h3 className="text-2xl sm:text-3xl font-bold mt-2 text-text-primary">
                 {activeResearch.title}
               </h3>
             </div>
 
-            <p className="text-neutral-700 leading-relaxed mb-8">
+            <p className="text-text-muted leading-relaxed mb-8">
               {activeResearch.description}
             </p>
 
-            <h4 className="text-lg sm:text-xl font-semibold mb-4">
+            <h4 className="text-lg sm:text-xl font-semibold mb-4 text-text-primary">
               Research Team
             </h4>
 
@@ -233,17 +164,19 @@ const ResearchAreas = () => {
               {activeResearch.members.map((member) => (
                 <div
                   key={member.name}
-                  className="rounded-xl p-5 bg-neutral-100"
+                  className="rounded-xl p-5 bg-background"
                 >
-                  <p className="font-semibold">{member.name}</p>
-                  <p className="text-sm text-neutral-600">
+                  <p className="font-semibold text-text-primary">
+                    {member.name}
+                  </p>
+                  <p className="text-sm text-text-muted">
                     {member.branch} · {member.semester} Semester
                   </p>
 
                   <div className="mt-3 flex gap-4 text-sm">
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-blue-600 hover:underline"
+                      className="text-primary hover:underline"
                     >
                       Email
                     </a>
@@ -251,7 +184,7 @@ const ResearchAreas = () => {
                       href={member.linkedin}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-blue-600 hover:underline"
+                      className="text-primary hover:underline"
                     >
                       LinkedIn
                     </a>

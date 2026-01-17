@@ -110,18 +110,7 @@ const JoinLab = () => {
               href="https://docs.google.com/forms/d/e/1FAIpQLSfvRBJzeQJy62QXnOlN9xX4VMEWV3EGdorRlJ_bev9sVANdMQ/viewform?usp=dialog"
               target="_blank"
               rel="noreferrer"
-              className="
-                px-12 sm:px-14
-                py-3 sm:py-4
-                rounded-lg
-                font-semibold
-                transition-all duration-300
-                hover:scale-[1.03]
-              "
-              style={{
-                backgroundColor: "#5EEAD4",
-                color: "#134E4A",
-              }}
+              className="btn-primary"
             >
               Join Now
             </a>

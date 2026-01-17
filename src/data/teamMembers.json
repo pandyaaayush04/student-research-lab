@@ -1,0 +1,305 @@
+{
+  "faculty": [
+    {
+      "name": "Dr. Himani Trivedi",
+      "role": "Head of MMPSRC & MMPSRPC Cell, LDRP-ITR, KSV",
+      "department": "Computer Engineering",
+      "specialization": "PhD",
+      "research": "Student research frameworks, applied AI systems, institutional research development",
+      "image": "/team/faculty/Maam Photo.png"
+    }
+  ],
+  "students": [
+    {
+      "name": "Kandarp Gajjar",
+      "role": "Research Assistant",
+      "branch": "Computer Engineering",
+      "semester": "8th",
+      "research": "Smart Grid Systems",
+      "image": "/team/students/Kandarpbhai.jpg"
+    },
+    {
+      "name": "Hemant Pande",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Autonomous Navigation",
+      "image": "/team/students/Hemant Pande.jpg"
+    },
+    {
+      "name": "Pragati Varu",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Water Quality IoT",
+      "image": "/team/students/Pragati Varu.jpeg"
+    },
+    {
+      "name": "Mahi Parmar",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Drone Technology",
+      "image": "/team/students/Mahi Parmar.jpg"
+    },
+    {
+      "name": "Aayush Pandya",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Solar Optimization",
+      "image": "/team/students/Aayush Pandya.jpeg"
+    },
+    {
+      "name": "Rudr Halvadiya",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Predictive Maintenance",
+      "image": "/team/students/Rudr.png"
+    },
+
+    {
+      "name": "Student Member 07",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "IoT Systems",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 08",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "Machine Learning",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 09",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Computer Vision",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 10",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Embedded Systems",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 11",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "7th",
+      "research": "AI Optimization",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 12",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "7th",
+      "research": "Cyber Security",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 13",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "Cloud Computing",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 14",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Blockchain",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 15",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Data Analytics",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 16",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "Robotics",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 17",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Edge Computing",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 18",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "7th",
+      "research": "Natural Language Processing",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 19",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "8th",
+      "research": "Smart Healthcare",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 20",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "8th",
+      "research": "AI in Agriculture",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 21",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Digital Twins",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 22",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "AR/VR",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 23",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Green Computing",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 24",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "7th",
+      "research": "Smart Cities",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 25",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Explainable AI",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 26",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "Autonomous Systems",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 27",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "7th",
+      "research": "Smart Energy Systems",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 28",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "8th",
+      "research": "Human Computer Interaction",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 29",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Software Architecture",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 30",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "Distributed Systems",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 31",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "5th",
+      "research": "Quantum Computing",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 32",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "7th",
+      "research": "AI Ethics",
+      "image": "/team/students/placeholder.jpg"
+    },
+
+    {
+      "name": "Student Member 33",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "4th",
+      "research": "Web Performance",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 34",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "6th",
+      "research": "DevOps Automation",
+      "image": "/team/students/placeholder.jpg"
+    },
+    {
+      "name": "Student Member 35",
+      "role": "Undergraduate Student",
+      "branch": "Computer Engineering",
+      "semester": "8th",
+      "research": "Intelligent Systems",
+      "image": "/team/students/placeholder.jpg"
+    }
+  ]
+}

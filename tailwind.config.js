@@ -4,21 +4,24 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#0F5D57",
-        primarySoft: "#15736E",
+        /* ===== BRAND ===== */
+        primary: "#134E4A",     // Dark Green–Teal
+        accent: "#F59E0B",      // Amber (sparingly)
 
-        ink: "#0B3D3A",
-        body: "#355F5B",
-        muted: "#6B8F8A",
+        /* ===== BACKGROUNDS ===== */
+        background: "#FAFAF9", // Page background
+        card: "#FFFFFF",       // Cards / sections
 
-        page: "#F3F8F7",
-        section: "#FFFFFF",
-        soft: "#EAF4F2",
+        /* ===== TEXT ===== */
+        text: {
+          primary: "#1C1917",
+          muted: "#78716C"
+        },
 
-        border: "#D6E5E2",
-        stars: "#BFD8D4",
-      },
-    },
+        /* ===== UI ===== */
+        border: "#E7E5E4"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };

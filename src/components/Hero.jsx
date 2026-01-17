@@ -1,4 +1,4 @@
-import logo from "../assets/SRL Logo.png";
+import logo from "C:/Users/pandy/OneDrive/Desktop/ReactJS/student-research-lab/public/SRL_Logo.webp";
 import BlurText from "./ui/BlurText";
 
 const Hero = () => {
@@ -12,14 +12,14 @@ const Hero = () => {
     <section
       id="home"
       className="
-        min-h-screen
-        pt-24 sm:pt-28 lg:pt-32
-        pb-10 sm:pb-16
+        h-screen
+        sm:pt-28 lg:pt-32
+        pb-10 sm:pb-8
         px-4 sm:px-6 md:px-8
         scroll-mt-28
       "
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto flex flex-col-reverse sm:flex-row gap-12 items-center justify-center">
         {/* LEFT COLUMN */}
         <div className="lg:pr-6 text-center lg:text-left">
           {/* MAIN TITLE */}
@@ -55,7 +55,7 @@ const Hero = () => {
             max-w-xl
             mx-auto lg:mx-0
             text-base sm:text-lg
-            leading-relaxed sm:leading-relaxed
+            leading-relaxed
             mb-10
             text-[#3A3A35]
           "
@@ -75,16 +75,7 @@ const Hero = () => {
           >
             <button
               onClick={() => scrollToSection("research")}
-              className="
-                px-7 sm:px-8 py-3
-                rounded-full
-                bg-[#5EEAD4]
-                text-[#134E4A]
-                font-semibold
-                transition-all
-                hover:scale-[1.03]
-                hover:opacity-90
-              "
+              className="btn-primary"
             >
               Explore Research
             </button>
@@ -94,12 +85,12 @@ const Hero = () => {
               className="
                 px-7 sm:px-8 py-3
                 rounded-full
-                border-2 border-[#5EEAD4]
-                text-[#5EEAD4]
+                border-2 border-primary
+                text-primary
                 font-semibold
                 transition-all
-                hover:bg-[#5EEAD4]
-                hover:text-[#134E4A]
+                hover:bg-primary
+                hover:text-white
                 hover:scale-[1.03]
               "
             >
@@ -115,13 +106,13 @@ const Hero = () => {
               src={logo}
               alt="Student Research Lab MMPSRPC KSV"
               className="
-    w-28 h-28
-    sm:w-36 sm:h-36
-    md:w-44 md:h-44
-    lg:w-48 lg:h-48
-    mx-auto mb-6
-    object-contain
-  "
+                w-28 h-28
+                sm:w-36 sm:h-36
+                md:w-44 md:h-44
+                lg:w-48 lg:h-48
+                mx-auto mb-6
+                object-contain
+              "
             />
 
             <h3
