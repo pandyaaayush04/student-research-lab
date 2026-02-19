@@ -75,7 +75,7 @@ const JoinLab = () => {
                 Review & Interaction
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed">
-                Applications are reviewed by faculty mentors. Shortlisted
+                Applications are reviewed by Dr. Himani trivedi ma'am. Shortlisted
                 candidates may be contacted for further interaction.
               </p>
             </div>
