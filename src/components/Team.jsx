@@ -188,8 +188,8 @@ const Team = () => {
               <p className="text-lg text-neutral-600 mt-1">{lead.role}</p>
 
               <div className="mt-2 space-y-3 text-neutral-600">
-                <p><b>Department:</b> {lead.department}</p>
-                <p><b>Specialization:</b> {lead.specialization}</p>
+                {/*<p><b>Department:</b> {lead.department}</p>*/}
+                {/*<p><b>Specialization:</b> {lead.specialization}</p>*/}
                 <p>
                   <b>Research Interests:</b> {lead.research}
                 </p>
