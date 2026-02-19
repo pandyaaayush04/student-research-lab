@@ -138,7 +138,7 @@ const timelineSteps = [
   {
     step: "Feb 2026",
     title: "Bridging Theory & Practice- A Research Talk",
-    description: "A research talk focused on connecting academic concepts with real-world applications through insights, discussions, and practical perspectives.",
+    description: "An upcoming research talk focused on connecting academic concepts with real-world applications through insights, discussions, and practical perspectives.",
     icon: <TrophyIcon />,
   },
 ];
