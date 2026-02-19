@@ -59,7 +59,7 @@ const Hero = () => {
             text-[#3A3A35]
           "
           >
-            We are a collaborative hub where undergraduate and graduate students
+            SRL is a collaborative hub where undergraduate and graduate students
             tackle real-world problems through interdisciplinary research.
           </p>
 
