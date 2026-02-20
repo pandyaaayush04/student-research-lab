@@ -71,6 +71,18 @@ export const organizationData = {
       { label: "Campuses", value: "5+" },
       { label: "Institutions", value: "Many" }
     ],
+    founders: [
+      {
+        name: "Pujya Chhaganbha",
+        image: "/founders/pujya_chhaganbha.jpg", // Ensure checking if this path resolves correctly in Vite
+        quote: "Kar Bhala Hoga Bhala."
+      },
+      {
+        name: "Shri Maneklal M. Patel",
+        image: "/founders/shri_maneklal_patel.jpg",
+        quote: "Education is the true service."
+      }
+    ],
     image: "/svkm.webp", // Assuming this exists
     features: [
       "Philanthropic Legacy Since 1919",

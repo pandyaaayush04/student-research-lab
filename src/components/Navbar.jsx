@@ -52,7 +52,7 @@ const Navbar = () => {
                 >
                   <button
                     className={`
-                      relative font-medium transition-colors hover:text-white flex items-center gap-1
+                      relative font-medium transition-colors hover:text-white flex items-center gap-1 whitespace-nowrap
                       ${
                         dropdownOpen || location.pathname.startsWith("/about")
                           ? "text-white"
@@ -140,6 +140,7 @@ const Navbar = () => {
                     text-white/90
                     transition-colors
                     hover:text-white
+                    whitespace-nowrap
 
                     lg:after:content-['']
                     lg:after:block
