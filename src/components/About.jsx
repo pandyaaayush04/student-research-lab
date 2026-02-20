@@ -279,11 +279,11 @@ const About = () => {
           {organizationData.svkm.founders.map((founder, index) => (
             <div key={index} className="flex flex-col items-center text-center">
               <div className="mb-6">
-                <div className="h-64 w-56 overflow-hidden rounded-lg">
+                <div className="w-72 mx-auto bg-gray-200 p-3 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rounded-sm">
                   <img
                     src={founder.image}
                     alt={founder.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto block"
                   />
                 </div>
               </div>
