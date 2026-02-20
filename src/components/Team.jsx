@@ -24,14 +24,14 @@ const MailIcon = ({ className = "" }) => (
 
 /* ---- TROPHY ICON ---- */
 const TrophyIcon = ({ className }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     className={className}
   >
     <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
@@ -46,7 +46,7 @@ const TrophyIcon = ({ className }) => (
 /* ---- CIRCULAR PROGRESS ---- */
 const CircularProgress = ({ percentage, colorClass }) => {
   const radius = 30; //Increased radius to prevent overlap
-  const stroke = 3.5; 
+  const stroke = 3.5;
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
@@ -100,7 +100,7 @@ const Team = () => {
     fetch("http://localhost:8000/students")
       .then((res) => {
         if (!res.ok) {
-           throw new Error("Backend not reachable");
+          throw new Error("Backend not reachable");
         }
         return res.json();
       })
@@ -109,23 +109,23 @@ const Team = () => {
 
         // Helper to merge backend data with local JSON
         const mergeData = (backendList, referenceLocalList) => {
-            return backendList.map((backendStudent) => {
-                const localStudent = referenceLocalList.find(
-                    (s) => s.name.trim().toLowerCase() === backendStudent.name.trim().toLowerCase()
-                );
-                return {
-                    ...backendStudent,
-                    image: localStudent?.image || "/team/default-avatar.png",
-                    Department: localStudent?.Department || "CE",
-                    Semester: localStudent?.Semester || "4th",
-                    Batch: localStudent?.Batch || "2024-2028",
-                    Institute: localStudent?.Institute || "LDRP-ITR",
-                    Linkedin: localStudent?.Linkedin || "",
-                    email: localStudent?.email || "",
-                    attendance_percentage: backendStudent.attendance_percentage ?? localStudent?.attendance_percentage,
-                    total_score: backendStudent.total_score ?? localStudent?.total_score
-                };
-            });
+          return backendList.map((backendStudent) => {
+            const localStudent = referenceLocalList.find(
+              (s) => s.name.trim().toLowerCase() === backendStudent.name.trim().toLowerCase()
+            );
+            return {
+              ...backendStudent,
+              image: localStudent?.image || "/team/default-avatar.png",
+              Department: localStudent?.Department || "CE",
+              Semester: localStudent?.Semester || "4th",
+              Batch: localStudent?.Batch || "2024-2028",
+              Institute: localStudent?.Institute || "LDRP-ITR",
+              Linkedin: localStudent?.Linkedin || "",
+              email: localStudent?.email || "",
+              attendance_percentage: backendStudent.attendance_percentage ?? localStudent?.attendance_percentage,
+              total_score: backendStudent.total_score ?? localStudent?.total_score
+            };
+          });
         };
 
         // Identify Research Assistants names for filtering
@@ -141,19 +141,19 @@ const Team = () => {
         // we might ideally want to keep local fallback, but current logic mimics "backend drives list".
         // To support "local fallback" if backend lacks them (e.g. name mismatch), 
         // we could augment the list. For now, sticking to the filtered backend lists to match existing behavior.
-        
+
         if (backendRAs.length > 0) {
-            setResearchAssistants(mergeData(backendRAs, localAssistants || []));
+          setResearchAssistants(mergeData(backendRAs, localAssistants || []));
         }
         if (backendStds.length > 0) {
-            setStudents(mergeData(backendStds, localStudents));
+          setStudents(mergeData(backendStds, localStudents));
         }
       })
       .catch((err) => {
         console.warn("Using local data fallback:", err.message);
       });
   }, [localStudents, localAssistants]);
-  
+
   const lead = faculty[0];
   const allStudentsForLeaderboard = [...researchAssistants, ...students];
 
@@ -192,12 +192,9 @@ const Team = () => {
               </div>
 
               <div className="mt-2 space-y-3 text-neutral-600">
-                {/*<p><b>Department:</b> {lead.department}</p>*/}
-                {/*<p><b>Specialization:</b> {lead.specialization}</p>*/}
-                
                 {lead.email && (
-                  <p className="flex items-center gap-2"> 
-                    <a 
+                  <p className="flex items-center gap-2">
+                    <a
                       href={`https://mail.google.com/mail/?view=cm&fs=1&to=${lead.email}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -260,21 +257,21 @@ const Team = () => {
 
         {/* ================= STUDENTS TILE ================= */}
         <div className="bg-white rounded-3xl px-6 lg:px-16 py-10 lg:py-14">
-          
+
           {/* LEADERBOARD SECTION */}
           <Leaderboard students={allStudentsForLeaderboard} />
 
           {/* RESEARCH ASSISTANTS SECTION */}
           {researchAssistants.length > 0 && (
             <>
-                <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">
-                    Research Assistants
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start mb-16">
-                    {researchAssistants.map((student, i) => (
-                    <StudentCard key={i} member={student} />
-                    ))}
-                </div>
+              <h2 className="text-3xl font-bold text-center mb-12 text-neutral-800">
+                Research Assistants
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start mb-16">
+                {researchAssistants.map((student, i) => (
+                  <StudentCard key={i} member={student} />
+                ))}
+              </div>
             </>
           )}
 
@@ -345,22 +342,22 @@ const StudentCard = ({ member }) => {
             <span className="font-semibold text-neutral-700">Batch:</span> {member.Batch}
           </p>
           <p className="text-xs text-neutral-500 mt-0.5">
-             {member.Institute}
+            {member.Institute}
           </p>
         </div>
 
         {/* Attendance & Score Stats Container */}
         {(member.attendance_percentage !== undefined || member.total_score !== undefined) && (
           <div className="flex items-center justify-center gap-4 bg-white border border-neutral-100 rounded-xl p-3 shadow-sm">
-            
+
             {/* Attendance Section */}
             {member.attendance_percentage !== undefined && (
               <div className="flex flex-col items-center gap-1">
-                <CircularProgress 
-                  percentage={member.attendance_percentage} 
+                <CircularProgress
+                  percentage={member.attendance_percentage}
                   colorClass={
-                    member.attendance_percentage >= 75 ? "text-green-500" : 
-                    member.attendance_percentage >= 60 ? "text-yellow-500" : "text-red-500"
+                    member.attendance_percentage >= 75 ? "text-green-500" :
+                      member.attendance_percentage >= 60 ? "text-yellow-500" : "text-red-500"
                   }
                 />
                 <span className="text-[9px] uppercase font-bold text-neutral-400">Attendance</span>
@@ -369,22 +366,22 @@ const StudentCard = ({ member }) => {
 
             {/* Divider */}
             {member.attendance_percentage !== undefined && member.total_score !== undefined && (
-                <div className="w-px h-8 bg-neutral-100"></div>
+              <div className="w-px h-8 bg-neutral-100"></div>
             )}
 
             {/* Score Section */}
             {member.total_score !== undefined && (
               <div className="flex flex-col items-center gap-1">
                 <div className="flex items-center justify-center w-10 h-10 bg-yellow-50 rounded-full text-yellow-600">
-                    <TrophyIcon className="w-5 h-5" />
+                  <TrophyIcon className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col leading-none">
-                    <span className="text-sm font-bold text-neutral-800">{member.total_score}</span>
-                    <span className="text-[9px] uppercase font-bold text-neutral-400">Score</span>
+                  <span className="text-sm font-bold text-neutral-800">{member.total_score}</span>
+                  <span className="text-[9px] uppercase font-bold text-neutral-400">Score</span>
                 </div>
               </div>
             )}
-            
+
           </div>
         )}
       </div>

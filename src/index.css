@@ -11,7 +11,8 @@ html {
 
 body {
   font-family: "Source Sans 3", system-ui, sans-serif;
-  color: #1C1917;           /* matches theme.text.primary */
+  color: #1C1917;
+  /* matches theme.text.primary */
 }
 
 h1,
@@ -20,36 +21,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
 }
 
 /* ===== REUSABLE UI COMPONENTS ===== */
 @layer components {
+
   /* Primary CTA */
   .btn-primary {
-    @apply
-      px-7 sm:px-8 py-3
-      rounded-full
-      bg-primary
-      text-white
-      font-semibold
-      transition-all
-      hover:scale-[1.03]
-      hover:opacity-90;
+    @apply px-7 sm:px-8 py-3 rounded-full bg-primary text-white font-semibold transition-all hover:scale-[1.03] hover:opacity-90;
   }
 
   /* Outline / Secondary CTA */
   .btn-outline {
-    @apply
-      px-7 sm:px-8 py-3
-      rounded-full
-      border-2 border-accent
-      text-accent
-      font-semibold
-      transition-all
-      hover:bg-accent
-      hover:text-primary
-      hover:scale-[1.03];
+    @apply px-7 sm:px-8 py-3 rounded-full border-2 border-accent text-accent font-semibold transition-all hover:bg-accent hover:text-primary hover:scale-[1.03];
   }
 
   /* Muted text */
@@ -69,12 +54,29 @@ h6 {
 }
 
 @keyframes vibrate {
-  0% { transform: translate(0); }
-  20% { transform: translate(-1px, 1px); }
-  40% { transform: translate(-1px, -1px); }
-  60% { transform: translate(1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-1px, 1px);
+  }
+
+  40% {
+    transform: translate(-1px, -1px);
+  }
+
+  60% {
+    transform: translate(1px, 1px);
+  }
+
+  80% {
+    transform: translate(1px, -1px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
 }
 
 .animate-vibrate {

@@ -10,7 +10,7 @@ export default {
 
         /* ===== BACKGROUNDS ===== */
         background: "#FAFAF9", // Page background
-        card: "#FFFFFF",       // Cards / sections
+        card: "#FFFEFB",       // Cards / sections (SRL Logo lightest shade)
 
         /* ===== TEXT ===== */
         text: {
