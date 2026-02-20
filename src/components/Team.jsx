@@ -185,7 +185,11 @@ const Team = () => {
                 )}
               </h3>
 
-              <p className="text-lg text-neutral-600 mt-1">{lead.role}</p>
+              <div className="text-lg text-neutral-600 mt-1">
+                {lead.role.split('\n').map((role, idx) => (
+                  <div key={idx}>{role.trim()}</div>
+                ))}
+              </div>
 
               <div className="mt-2 space-y-3 text-neutral-600">
                 {/*<p><b>Department:</b> {lead.department}</p>*/}

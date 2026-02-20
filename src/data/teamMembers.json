@@ -2,7 +2,7 @@
   "faculty": [
     {
       "name": "Dr. Himani Trivedi",
-      "role": "Head of M. M. Patel Students Research Project Cell (MMPSRPC), Kadi Sarva Vishwavidyalaya | Co-coordinator at M. M. Patel Research Cell (MMPRC), Kadi Sarva Vishwavidyalaya | Assistant Professor at LDRP-ITR",
+      "role": "Head of M. M. Patel Students Research Project Cell (MMPSRPC),Kadi Sarva Vishwavidyalaya,\nCo-coordinator at M. M. Patel Research Cell (MMPRC),Kadi Sarva Vishwavidyalaya,\nAssistant Professor at LDRP-ITR",
       "department": "Computer Engineering",
       "specialization": "PhD",
       "research": "Student research frameworks, applied AI systems, institutional research development",
@@ -46,7 +46,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 35.0
+      "total_score": 35
     },
     {
       "name": "Gajjar Antra Ashvinkumar",
@@ -58,7 +58,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 34.5
+      "total_score": 34
     },
     {
       "name": "Kumavat Yash Nenaram",
@@ -70,7 +70,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 34.5
+      "total_score": 35
     },
     {
       "name": "Dabhi Chrisha Manish",
@@ -82,7 +82,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 35.5
+      "total_score": 36
     },
     {
       "name": "Rudr Jayeshkumar Halvadiya",
@@ -94,7 +94,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 34.5
+      "total_score": 35
     },
     {
       "name": "Pragati Varu",
@@ -106,7 +106,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 38.46,
-      "total_score": 7.0
+      "total_score": 7
     },
     {
       "name": "Aayush Viral Pandya",
@@ -118,7 +118,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 25.5
+      "total_score": 26
     },
     {
       "name": "Mahi Nitinchandra Parmar",
@@ -130,7 +130,7 @@
       "Batch": "2024-2028",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 28.0
+      "total_score": 28
     },
     {
       "name": "Honey Modha",
@@ -166,7 +166,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 23.08,
-      "total_score": 10.5
+      "total_score": 11
     },
     {
       "name": "Patel Banshari Rahulkumar",
@@ -178,7 +178,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 84.62,
-      "total_score": 53.5
+      "total_score": 54
     },
     {
       "name": "Mihir Patel",
@@ -190,7 +190,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 61.54,
-      "total_score": 17.5
+      "total_score": 18
     },
     {
       "name": "Heny Patel",
@@ -202,7 +202,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 61.54,
-      "total_score": 17.5
+      "total_score": 18
     },
     {
       "name": "Patel Krish Himanshu",
@@ -250,7 +250,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 69.23,
-      "total_score": 45.5
+      "total_score": 46
     },
     {
       "name": "Krishna Bhatt",
@@ -286,7 +286,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 15.38,
-      "total_score": 9.5
+      "total_score": 10
     },
     {
       "name": "Panchal Henit Shaileshbhai",
@@ -298,7 +298,7 @@
       "Batch": "2023-2027",
       "Institute": "LDRP-ITR",
       "attendance_percentage": 53.85,
-      "total_score": 16.5
+      "total_score": 17
     },
     {
       "name": "Jenish Sorathiya",
@@ -310,7 +310,7 @@
       "Batch": "2023-2027",
       "Institute": "VSITR",
       "attendance_percentage": 92.31,
-      "total_score": 49.5
+      "total_score": 50
     },
     {
       "name": "Kanksha Keyur Buch",
