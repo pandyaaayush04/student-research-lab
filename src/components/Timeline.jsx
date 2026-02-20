@@ -129,7 +129,7 @@ const timelineSteps = [
     description: "An interactive gathering where alumni reconnect, share experiences, and inspire SRL members with their journeys and insights.",
     icon: <MedalIcon />,
   },
- {
+  {
     step: "Jan 2026",
     title: "Organized ImpactThon and InnovAItion Finalists",
     description: (
@@ -156,28 +156,28 @@ const itemVariants = {
 
 const slideInLeft = {
   hidden: { opacity: 0, x: -50 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
   },
 };
 
 const slideInRight = {
   hidden: { opacity: 0, x: 50 },
-  visible: { 
-    opacity: 1, 
-    x: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
   },
 };
 
 const popIn = {
   hidden: { scale: 0, opacity: 0 },
-  visible: { 
-    scale: 1, 
-    opacity: 1, 
-    transition: { type: "spring", stiffness: 260, damping: 20, delay: 0.2 } 
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 260, damping: 20, delay: 0.2 }
   },
 };
 
@@ -199,13 +199,13 @@ const TimelineItem = ({ item, index }) => {
         {isEvenStep ? (
           // EVEN STEP (e.g., 2026): Show NUMBER on Left -> Slide in from Left
           <motion.div variants={slideInLeft} className="text-center sm:text-right pr-0 sm:pr-8 hidden sm:block">
-            <span className="text-6xl sm:text-8xl font-bold text-teal-100/80 tracking-tighter">
+            <span className="text-6xl sm:text-8xl font-bold tracking-tighter" style={{ color: '#16B29D' }}>
               {item.step}
             </span>
           </motion.div>
         ) : (
           // ODD STEP (e.g., 2025): Show CONTENT on Left -> Slide in from Left
-          <motion.div 
+          <motion.div
             variants={slideInLeft}
             whileHover={{ scale: 1.05, x: -10 }}
             className="text-center sm:text-right pr-0 sm:pr-8 cursor-pointer"
@@ -222,14 +222,14 @@ const TimelineItem = ({ item, index }) => {
 
       {/* CENTER ICON */}
       <div className="relative z-10 flex items-center justify-center w-full sm:w-[10%] my-4 sm:my-0">
-        <motion.div 
+        <motion.div
           variants={popIn}
           whileHover={{ scale: 1.2, rotate: 15 }}
           className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-teal-500 shadow-xl flex items-center justify-center text-white ring-8 ring-white cursor-pointer"
         >
-           <div className="scale-125 sm:scale-150">
-             {item.icon}
-           </div>
+          <div className="scale-125 sm:scale-150">
+            {item.icon}
+          </div>
         </motion.div>
       </div>
 
@@ -237,8 +237,8 @@ const TimelineItem = ({ item, index }) => {
       <div className={`w-full sm:w-[45%] flex ${isEvenStep ? 'justify-start' : 'justify-start'}`}>
         {isEvenStep ? (
           // EVEN STEP (e.g., 2026): Show CONTENT on Right -> Slide in from Right
-          <motion.div 
-            variants={slideInRight} 
+          <motion.div
+            variants={slideInRight}
             whileHover={{ scale: 1.05, x: 10 }}
             className="text-center sm:text-left pl-0 sm:pl-8 cursor-pointer"
           >
@@ -252,29 +252,29 @@ const TimelineItem = ({ item, index }) => {
         ) : (
           // ODD STEP (e.g., 2025): Show NUMBER on Right -> Slide in from Right
           <motion.div variants={slideInRight} className="text-center sm:text-left pl-0 sm:pl-8 hidden sm:block">
-            <span className="text-6xl sm:text-8xl font-bold text-teal-100/80 tracking-tighter">
+            <span className="text-6xl sm:text-8xl font-bold tracking-tighter" style={{ color: '#16B29D' }}>
               {item.step}
             </span>
           </motion.div>
         )}
       </div>
-      
+
       {/* Mobile Number Display (Only visible on small screens) */}
-       <motion.div variants={slideInLeft} className="sm:hidden text-6xl font-bold text-teal-100/80 mb-2">
-          {item.step}
-       </motion.div>
+      <motion.div variants={slideInLeft} className="sm:hidden text-6xl font-bold mb-2" style={{ color: '#16B29D' }}>
+        {item.step}
+      </motion.div>
     </motion.div>
   );
 };
 
 const Timeline = () => {
   return (
-    <section className="py-16 sm:py-20 overflow-hidden overflow-x-hidden">
+    <section className="py-16 sm:py-20 overflow-hidden overflow-x-hidden" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
       <div className="max-w-7xl mx-auto">
         <div className="rounded-2xl bg-card px-6 sm:px-10 lg:px-14 py-8 sm:py-12 mx-4 sm:mx-6 lg:mx-8">
           {/* HEADER */}
           <div className="text-center mb-16 sm:mb-24 max-w-3xl mx-auto">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -282,7 +282,7 @@ const Timeline = () => {
             >
               Our Journey
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}

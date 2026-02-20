@@ -164,7 +164,7 @@ const Team = () => {
         {/* ================= FACULTY TILE ================= */}
         <div className="bg-white rounded-3xl px-6 lg:px-16 py-10 lg:py-14">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-8 text-neutral-800">
-            Faculty
+            Research Leadership
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -194,9 +194,7 @@ const Team = () => {
               <div className="mt-2 space-y-3 text-neutral-600">
                 {/*<p><b>Department:</b> {lead.department}</p>*/}
                 {/*<p><b>Specialization:</b> {lead.specialization}</p>*/}
-                <p>
-                  <b>Research Interests:</b> {lead.research}
-                </p>
+                
                 {lead.email && (
                   <p className="flex items-center gap-2"> 
                     <a 
