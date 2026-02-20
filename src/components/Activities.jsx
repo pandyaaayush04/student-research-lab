@@ -7,6 +7,9 @@ import Photo4 from "../assets/gallery/Photo4.webp";
 import Pic2 from "../assets/gallery/pic2.png";
 import Pic1 from "../assets/gallery/pic1.png";
 import Pic4 from "../assets/gallery/pic4.png";
+import Pic5 from "../assets/gallery/Pic5.png";
+import Pic6 from "../assets/gallery/Pic6.png";
+
 
 const Activities = () => {
 	const [activeItem, setActiveItem] = useState(null);
@@ -19,8 +22,26 @@ const Activities = () => {
 			image: Pic2,
 			year: 2026,
 			link: "https://www.linkedin.com/posts/mmpsrpc_ksv-svkm-mmpsrpc-activity-7417800043421843456-rV2a?utm_source=share&utm_medium=member_desktop&rcm=ACoAADKU7EwBd6ANuk69I1ptc1jInauK8Qjbvhc",
-			brief: "At the Students Research Lab under the M. M. Patel Students Research Project Cell (KSV-MMPSRPC), Kadi Sarva Vishwavidyalaya, Gandhinagar, a research-oriented session was conducted focusing on algorithm optimization within a problem-driven research framework.Thesession emphasized analytical thinking, performance evaluation, and methodological refinement of algorithms. Students engaged in structured discussions, comparative analysis of algorithmic approaches, and collaborative exploration of optimization techniques aligned with research standards.The activity aimed to cultivate research aptitude by strengthening logical rigor, encouraging evidence-based reasoning, and promoting a systematic, experimentation-focused approach to computational problem solving.",
+			brief: "At the Students Research Lab under the M. M. Patel Students Research Project Cell (KSV-MMPSRPC), Kadi Sarva Vishwavidyalaya, Gandhinagar, a research-oriented session was conducted focusing on algorithm optimization within a problem-driven research framework.Thesession emphasized analytical thinking, performance evaluation, and methodological refinement of algorithms. Students engaged in structured discussions, comparative analysis of algorithmic approaches, and collaborative exploration of optimization techniques aligned with research stan	Gujarat Innovation Project Showcase – Regional Project Showcasedards.The activity aimed to cultivate research aptitude by strengthening logical rigor, encouraging evidence-based reasoning, and promoting a systematic, experimentation-focused approach to computational problem solving.",
 			date: "4 February 2026",
+		},
+		{
+			title: "Project Showcase",
+			description: "Gujarat Innovation Project Showcase – Regional Project Showcase.",
+			image: Pic5, // Placeholder image, update as needed
+			year: 2026,
+			link: "https://www.linkedin.com/posts/mmpsrpc_edunetfoundation-ksv-svkm-activity-7429557690068017152-W3eO?utm_source=share&utm_medium=member_desktop&rcm=ACoAADKU7EwBd6ANuk69I1ptc1jInauK8Qjbvhc",
+			brief: "OSMAR: Advanced Oil Spill Monitoring using SAR Imagery\nThe M. M. Patel Students Research Project Cell (MMPSRPC) at Kadi Sarva Vishwavidyalaya (KSV) is proud to announce that Team OSMAR has secured the Second Prize (Booth Track) at the Gujarat Innovation Project Showcase held on February 13, 2026, at GEC Surat. Organized by the Edunet Foundation and supported by Shell India Markets Pvt. Ltd., this regional showcase recognized the team's innovative project, 'OSMAR: Oil Spill Monitoring using Advanced SAR Imagery.' Developed by Student Research Lab (SRL) members from the Computer Engineering Department at LDRP-ITR, the project features both hardware and software prototypes designed to detect and analyze oil spills with high precision. This success stems from the Skills4Future Program, a strategic collaboration between KSV and Edunet Foundation that provides students with the industry exposure and structured mentorship necessary to transform academic research into impactful, real-world technological solutions.",
+			date: "2026",
+		},
+		{
+			title: "ImpactThon - KSV ",
+			description: "Winner teams from SRL",
+			image: Pic6,
+			year: 2026,
+			link: "https://www.linkedin.com/posts/mmpsrpc_ksv-svkm-mmpsrpc-activity-7429762263676469248-fv37?utm_source=share&utm_medium=member_desktop&rcm=ACoAADKU7EwBd6ANuk69I1ptc1jInauK8Qjbvhc",
+			brief: "During the ImpactThon hackathon at Kadi Sarva Vishwavidyalaya, a total of eight teams from the Students Research Lab (SRL) were shortlisted for the advanced round of evaluation. These teams were selected based on the originality of their ideas, feasibility of implementation, and the potential real-world impact of their proposed solutions. The shortlisted teams demonstrated strong research orientation, effective teamwork, and a structured problem-solving approach, reflecting the academic rigor and innovation culture fostered within SRL. Their selection marked a significant milestone, showcasing the lab’s commitment to nurturing technically competent and impact-driven student innovators.",
+			date: "31 January 2026",
 		},
 		// Alumni Connect Session (2025) removed
 		{

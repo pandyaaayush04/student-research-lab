@@ -3,9 +3,7 @@ export const organizationData = {
     title: "M. M. Patel Students Research Project Cell",
     subtitle: "For the students, By the students, Of the students!",
     description: [
-      "The M. M. Patel Students Research Project Cell (MMPSRPC) is an initiative at KSV University dedicated to fostering innovation and research among its students. Established in 2024, it aims to provide a platform for students to explore their research potential and contribute to the academic community.",
-      "Our foundation is built upon aspirations, curiosity, excellence, and dedication. We uphold a strong commitment to academic excellence and empower skill development through various activities designed to strengthen students' knowledge and growth.",
-      "We envision creating a thriving ecosystem of young researchers who actively contribute to their fields, shaping the future of innovation and scientific progress."
+      "Established in 2024, the M. M. Patel Students Research Project Cell (MMPSRPC) was founded with the vision of fostering a strong research culture and academic excellence among students at KSV University. It was created as a dynamic platform to encourage young minds to explore research, innovation, and interdisciplinary learning while actively contributing to the academic community.Since its inception, MMPSRPC has evolved from a small group of motivated students into a vibrant and collaborative community of researchers, mentors, and faculty members. Driven by a commitment to nurturing talent and promoting meaningful research, the cell continues to empower students to think critically, innovate, and push the boundaries of knowledge"
     ],
     mission: "To empower student researchers through comprehensive support and funding initiatives, thereby fostering a culture of innovation and scientific inquiry.",
     vision: "To create a thriving ecosystem of young researchers who actively contribute to their respective fields, shaping the future of innovation and scientific progress.",
@@ -28,9 +26,7 @@ export const organizationData = {
     title: "Kadi Sarva Vishwavidyalaya",
     subtitle: "Kar Bhala Hoga Bhala",
     description: [
-      "Kadi Sarva Vishwavidyalaya is a University established vide Gujarat State Government Act 21 of 2007 in May 2007 and approved by UGC. It is dedicated to providing quality education, fostering research, and contributing to societal development.",
-      "The University identifies quality education as its core identity and is committed to offering inclusive, accessible, and high-standard education across its constituent institutions.",
-      "Our guiding motto 'Kar Bhala Hoga Bhala' (Do good, and good will come) reflects our deep-rooted commitment to value-based education and community service."
+      "Kadi Sarva Vishwavidyalaya (KSV) was established in May 2007 under the Gujarat State Government Act 21 of 2007 and is recognized by the University Grants Commission (UGC) (Ref. F. 9-18/2008 (CPP-1), dated March 19, 2009). Founded by Sarva Vidyalaya Kelavani Mandal (SVKM), a philanthropic trust with over 105 years of legacy guided by the principle “Kar Bhala, Hoga Bhala” (Do good, and good will come), the university is dedicated to providing inclusive, value-based education to students from all sections of society.The university’s growth was significantly strengthened by the visionary leadership of Late Shri Maneklal M. Patel, under whom the Gandhinagar and Kadi campuses and their constituent colleges were unified in March 2012 under the umbrella of KSV. Today, with 23+ constituent colleges and departments across its campuses, KSV offers contemporary, need-based programs while promoting research, innovation, and holistic development for societal and economic advancement."
     ],
     mission: "To deliver need-based education relevant to contemporary times, promote excellence in research and innovation, and cultivate an inclusive and welcoming environment for all students.",
     vision: "To be a leading university that provides quality education and research opportunities to students from all backgrounds, contributing significantly to the social, economic, and cultural development of society.",
@@ -59,9 +55,7 @@ export const organizationData = {
     title: "Sarva Vidyalaya Kelavani Mandal",
     subtitle: "Do Good and Good Will Follow",
     description: [
-      "Sarva Vidyalaya Kelavani Mandal (SVKM) is a prestigious philanthropic educational trust founded in 1919 by the visionary educationist Pujya Chhaganbha (Shri Chhaganlal Pitambardas Patel). Starting with just six students, it has grown into a massive educational network serving over 50,000 students.",
-      "The trust operates multiple campuses across Kadi, Gandhinagar, and other locations, offering education from pre-primary to doctoral levels. It is committed to providing value-based education accessible to all, regardless of caste, creed, or religion.",
-      "SVKM's guiding principle is rooted in the motto 'Kar Bhala Hoga Bhala' (Do good and good will follow), reflecting its century-long dedication to selfless service and societal upliftment."
+      "Sarva Vidyalaya Kelavani Mandal (SVKM) was founded in 1919 by the visionary philanthropist Pujya Chhaganbha, whose guiding philosophy, “કર ભલા, હોગા ભલા” (Do good, and good will come), continues to inspire the institution’s journey in education and service. From its humble beginning with just six students, SVKM has grown into a vast educational network, now nurturing the academic aspirations of over 54,000 students across Kadi and Gandhinagar."
     ],
     mission: "To provide quality, value-based, and affordable education to all, especially the underprivileged, and to foster holistic development among students and society.",
     vision: "To be a distinguished institution that generates confidence and dynamism in students, creating globally sustainable icons who contribute to the upliftment of their communities.",
@@ -69,7 +63,7 @@ export const organizationData = {
       { label: "Years of Legacy", value: "100+" },
       { label: "Students", value: "50,000+" },
       { label: "Campuses", value: "5+" },
-      { label: "Institutions", value: "Many" }
+      { label: "Institutions", value: "120+" }
     ],
     founders: [
       {
