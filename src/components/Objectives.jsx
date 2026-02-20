@@ -93,100 +93,60 @@ const objectives = [
         icon: <Icon360 />,
         title: "360° Development of Students",
         description: "To cultivate well-rounded, future-ready achievers equipped to excel beyond boundaries.",
-        bgColor: "bg-teal-50",
-        numberColor: "bg-teal-100",
-        textColor: "text-teal-900",
-        borderColor: "border-teal-300"
     },
     {
         id: 2,
         icon: <IconTeam />,
         title: "Team-Based Learning & Collaborative Activities",
         description: "To promote teamwork through group research projects, innovation activities, and collaborative problem-solving, building coordination and leadership skills.",
-        bgColor: "bg-cyan-50",
-        numberColor: "bg-cyan-100",
-        textColor: "text-cyan-900",
-        borderColor: "border-cyan-300"
     },
     {
         id: 3,
         icon: <IconHandsOn />,
         title: "Hands-on Experience & Skill-Based Learning",
         description: "To encourage practical experimentation and hands-on technical sessions, ensuring students develop industry-relevant expertise.",
-        bgColor: "bg-sky-50",
-        numberColor: "bg-sky-100",
-        textColor: "text-sky-900",
-        borderColor: "border-sky-300"
     },
     {
         id: 4,
         icon: <IconResearch />,
         title: "Interdisciplinary Research",
         description: "Addressing emerging technologies and societal challenges through cross-domain collaboration and innovative methodologies.",
-        bgColor: "bg-blue-50",
-        numberColor: "bg-blue-100",
-        textColor: "text-blue-900",
-        borderColor: "border-blue-300"
     },
     {
         id: 5,
         icon: <IconTheory />,
         title: "Bridging Theory & Practice",
         description: "Connecting academic learning with real-world engineering through continuous technical engagement and mentorship.",
-        bgColor: "bg-indigo-50",
-        numberColor: "bg-indigo-100",
-        textColor: "text-indigo-900",
-        borderColor: "border-indigo-300"
     },
     {
         id: 6,
         icon: <IconMentors />,
         title: "Guided Mentorship",
         description: "Fostering professional growth and character building under the expert guidance of dedicated faculty mentors.",
-        bgColor: "bg-purple-50",
-        numberColor: "bg-purple-100",
-        textColor: "text-purple-900",
-        borderColor: "border-purple-300"
     },
     {
         id: 7,
         icon: <IconInnovation />,
         title: "Applied Innovation",
         description: "Focusing on solution-oriented research and technological advancements that address practical industrial needs.",
-        bgColor: "bg-fuchsia-50",
-        numberColor: "bg-fuchsia-100",
-        textColor: "text-fuchsia-900",
-        borderColor: "border-fuchsia-300"
     },
     {
         id: 8,
         icon: <IconSkills />,
         title: "Professional Excellence",
         description: "Developing a mindset of quality, ethics, and competitive technical standards among all lab members.",
-        bgColor: "bg-pink-50",
-        numberColor: "bg-pink-100",
-        textColor: "text-pink-900",
-        borderColor: "border-pink-300"
     },
     {
         id: 9,
         icon: <IconGlobal />,
         title: "Global Recognition",
         description: "Striving for excellence that places our research and students on the international stage.",
-        bgColor: "bg-rose-50",
-        numberColor: "bg-rose-100",
-        textColor: "text-rose-900",
-        borderColor: "border-rose-300"
     },
     {
         id: 10,
         icon: <IconReady />,
         title: "Industry Readiness",
         description: "Equipping students with the skills and confidence required to transition seamlessly into high-impact professional roles.",
-        bgColor: "bg-orange-50",
-        numberColor: "bg-orange-100",
-        textColor: "text-orange-900",
-        borderColor: "border-orange-300"
     }
 ];
 
@@ -212,14 +172,12 @@ const ObjectiveItem = ({ objective, index }) => {
                 {/* SVG Icon Circle */}
                 <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                        className={`
-                            z-30 flex items-center justify-center 
-                            w-20 h-20 sm:w-24 sm:h-24 
-                            rounded-full ${objective.numberColor} 
-                            border-2 sm:border-4 border-white shadow-lg sm:shadow-xl
-                            ${objective.textColor}
-                            shrink-0
-                        `}
+                    className="z-20 flex items-center justify-center 
+                        w-20 h-20 sm:w-24 sm:h-24 
+                        rounded-full bg-teal-600
+                        border-4 border-white shadow-lg sm:shadow-xl
+                        text-white
+                        shrink-0"
                 >
                     <div className="flex items-center justify-center p-2">
                         {objective.icon}
@@ -231,29 +189,31 @@ const ObjectiveItem = ({ objective, index }) => {
                     <motion.div
                         whileHover={{ x: isMobile ? 0 : 10 }}
                         className={`
-                            relative z-10 w-full ${objective.bgColor} 
-                            border-2 ${objective.borderColor}
+                            relative z-10 w-full
+                            border border-neutral-200
                             flex flex-col justify-center
-                            group-hover:shadow-md h-auto
-                            ${isMobile ? 'px-4 py-3 rounded-xl' : 'pl-16 pr-14 py-3 min-h-[6rem]'}
+                            group-hover:shadow-md group-hover:border-teal-300
+                            transition-all duration-300
+                            ${isMobile ? 'px-4 py-3 rounded-xl' : 'pl-16 pr-14 py-4 min-h-[7rem] rounded-r-xl'}
                         `}
                         style={{
-                            clipPath: isMobile 
-                                ? 'none' 
-                                : 'polygon(0% 0%, calc(100% - 25px) 0%, 100% 50%, calc(100% - 25px) 100%, 0% 100%)'
+                            backgroundColor: '#FFFEFB',
+                            ...(isMobile ? {} : {
+                                clipPath: 'polygon(0% 0%, calc(100% - 25px) 0%, 100% 50%, calc(100% - 25px) 100%, 0% 100%)',
+                            })
                         }}
                     >
-                        <h3 className={`text-base sm:text-xl font-bold ${objective.textColor} mb-1 sm:mb-2`}>
+                        <h3 className="text-base sm:text-xl font-bold text-neutral-800 mb-1 sm:mb-2">
                             {objective.title}
                         </h3>
-                        <p className="text-neutral-700 text-xs sm:text-sm leading-snug sm:leading-relaxed max-w-3xl">
+                        <p className="text-neutral-500 text-xs sm:text-sm leading-snug sm:leading-relaxed max-w-3xl">
                             {objective.description}
                         </p>
                     </motion.div>
 
                     {/* Visual Number Indicator in Background */}
                     <div className={`absolute top-1/2 -translate-y-1/2 pointer-events-none opacity-5 ${isMobile ? 'right-2' : 'right-20'}`}>
-                        <span className={`text-5xl sm:text-7xl font-black ${objective.textColor}`}>
+                        <span className="text-5xl sm:text-7xl font-black text-neutral-800">
                             {objective.id}
                         </span>
                     </div>
